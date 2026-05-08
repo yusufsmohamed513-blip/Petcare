@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Care</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!--css-->
+<link rel="stylesheet" href="./Css/style.css">
+
+</head>
+
+<body >
+
+  
+<!-- ================= NAVBAR ================= -->
+ <div class="container-fluid bg-[#f3ede7]">
+<header class="bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-gray-900 text-pink-800">Pawly</h1>
+
+    <!-- Desktop Menu -->
+   
+
+       <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+      <a href="./index.html" class="hover:text-red-500">Home</a>
+      <a href="./dog.html" class="hover:text-red-500">Dog</a>
+      <a href="./cat.html" class="hover:text-red-500">Cat</a>
+      <a href="./smallpets.html" class="hover:text-red-500">Small Pet</a>
+      <a href="./shopbybread.html" class="hover:text-red-500">Shop by Breed</a>
+      <a href="./consult.html" class="hover:text-red-500">Consult Vet</a>
+    </nav>
+
+
+    <!-- RIGHT SECTION -->
+    <div class="flex items-center gap-4">
+
+      <!-- Search -->
+      <div class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2 w-52">
+        <input type="text" placeholder="Search..." 
+          class="bg-transparent outline-none w-full text-sm">
+        <i class="bi bi-search"></i>
+      </div>
+
+      <!-- Icons -->
+      <div class="hidden md:flex items-center gap-3">
+
+        <!-- Cart -->
+        <button class="relative w-10 h-10 flex items-center justify-center border rounded-full hover:bg-red-500 hover:text-white transition">
+          <i class="bi bi-cart text-lg"></i>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">2</span>
+        </button>
+
+        <!-- Wishlist -->
+        <button class="relative w-10 h-10 flex items-center justify-center border rounded-full hover:bg-pink-500 hover:text-white transition">
+          <i class="bi bi-heart text-lg"></i>
+        </button>
+
+        <!-- Profile -->
+        <a href="./loginpage.html">
+          <button class="w-10 h-10 flex items-center justify-center border rounded-full hover:bg-green-600 hover:text-white transition">
+            <i class="bi bi-person text-lg"></i>
+          </button>
+        </a>
+
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn" class="md:hidden text-2xl">
+        ☰
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ================= MOBILE MENU ================= -->
+
+  <div id="mobileMenu" class="hidden md:hidden px-6 pb-4">
+
+    <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+      <a href="./index.html" class="hover:text-red-500">Home</a>
+      <a href="./dog.html" class="hover:text-red-500">Dog</a>
+      <a href="./cat.html" class="hover:text-red-500">Cat</a>
+      <a href="./small pets.html" class="hover:text-red-500">Small Pet</a>
+      <a href="./shop by bread.html" class="hover:text-red-500">Shop by Breed</a>
+      <a href="./consult.html" class="hover:text-red-500">Consult Vet</a>
+    </nav>
+
+    <!-- Mobile Search -->
+    <div class="mt-4 flex items-center bg-gray-100 rounded-full px-4 py-2">
+      <input type="text" placeholder="Search..." 
+        class="bg-transparent outline-none w-full text-sm">
+      <i class="bi bi-search"></i>
+    </div>
+
+    <!-- Mobile Icons -->
+    <div class="flex items-center gap-4 mt-4">
+
+      <button class="w-10 h-10 flex items-center justify-center border rounded-full">
+        <i class="bi bi-cart"></i>
+      </button>
+
+      <button class="w-10 h-10 flex items-center justify-center border rounded-full">
+        <i class="bi bi-heart"></i>
+      </button>
+
+      <a href="$">
+        <button class="w-10 h-10 flex items-center justify-center border rounded-full">
+          <i class="bi bi-person"></i>
+        </button>
+      </a>
+
+    </div>
+
+  </div>
+</header>
+</div>
+
+
+<!--banner section-->
+
+<section class="bg-[#fdf9f6] py-16 px-6 text-center">
+  <div class="max-w-4xl mx-auto">
+    
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+      Curated for your <span class="text-[#b33a3a]">unique</span> companion.
+    </h1>
+
+    <p class="mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+      Every breed has a story, a personality, and specific needs. Select your pet type to explore tailored essentials.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
+      
+      <a href="#" class="group flex items-center gap-4 bg-white px-8 py-5 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all w-full sm:w-auto">
+        <div class="w-12 h-12 flex items-center justify-center bg-[#fde2e2] rounded-full transition-colors group-hover:bg-[#fbcaca]">
+          <i class="bi bi-paw-fill text-[#b33a3a] text-xl"></i>
+        </div>
+        <div class="text-left">
+          <p class="font-bold text-gray-900 text-lg leading-tight">Shop for Dogs</p>
+          <p class="text-sm text-gray-500">32+ Breeds curated</p>
+        </div>
+      </a>
+
+      <a href="#" class="group flex items-center gap-4 bg-white px-8 py-5 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all w-full sm:w-auto">
+        <div class="w-12 h-12 flex items-center justify-center bg-[#c1fef6] rounded-full transition-colors group-hover:bg-[#a5f3e9]">
+          <i class="bi bi-paw-fill text-[#1a9384] text-xl"></i>
+        </div>
+        <div class="text-left">
+          <p class="font-bold text-gray-900 text-lg leading-tight">Shop for Cats</p>
+          <p class="text-sm text-gray-500">18+ Breeds curated</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!--card section-->
+
+  <section class="bg-[#fdf9f6] py-12 px-6">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="flex justify-between items-end mb-8">
+      <div>
+        <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">Trending Dog Breeds</h2>
+        <p class="text-gray-500 mt-1 text-sm md:text-base">Personalized kits based on genetic health and behavior.</p>
+      </div>
+      <a href="#" class="text-[#b33a3a] font-bold flex items-center gap-2 hover:underline text-sm md:text-base">
+        View All Breeds <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="flex gap-6 overflow-x-auto pb-6 scrollbar-hide md:grid md:grid-cols-4 md:overflow-visible">
+      
+      <div class="min-w-[280px] bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="./Images/img. 42.png" alt="Golden Retriever" class="w-full h-72 object-cover rounded-t-[2.5rem]">
+        <div class="p-6">
+          <span class="text-[10px] font-black uppercase tracking-widest text-teal-600">Large Breed</span>
+          <h3 class="text-xl font-bold text-gray-900 mt-1">Golden Retriever</h3>
+          <p class="text-gray-500 text-sm mt-2 leading-relaxed">Energetic, Loyal & High-Maintenance Coat.</p>
+        </div>
+      </div>
+
+      <div class="min-w-[280px] bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="./Images/img. 7.png" alt="French Bulldog" class="w-full h-72 object-cover rounded-t-[2.5rem]">
+        <div class="p-6">
+          <span class="text-[10px] font-black uppercase tracking-widest text-yellow-600">Apartment Friendly</span>
+          <h3 class="text-xl font-bold text-gray-900 mt-1">French Bulldog</h3>
+          <p class="text-gray-500 text-sm mt-2 leading-relaxed">Playful, Smart & Sensitive Digestion.</p>
+        </div>
+      </div>
+
+      <div class="min-w-[280px] bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="./Images/img. 18.png" alt="Welsh Corgi" class="w-full h-72 object-cover rounded-t-[2.5rem]">
+        <div class="p-6">
+          <span class="text-[10px] font-black uppercase tracking-widest text-red-600">Active Herder</span>
+          <h3 class="text-xl font-bold text-gray-900 mt-1">Welsh Corgi</h3>
+          <p class="text-gray-500 text-sm mt-2 leading-relaxed">Alert, Spirited & Prone to Joint Care Needs.</p>
+        </div>
+      </div>
+
+      <div class="min-w-[280px] bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="./Images/img. 16.png" alt="Maine Coon" class="w-full h-72 object-cover rounded-t-[2.5rem]">
+        <div class="p-6">
+          <span class="text-[10px] font-black uppercase tracking-widest text-teal-500">Gentle Giant</span>
+          <h3 class="text-xl font-bold text-gray-900 mt-1">Maine Coon</h3>
+          <p class="text-gray-500 text-sm mt-2 leading-relaxed">Social, Fluffy & Requires Premium Hydration.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--section2-->
+
+  <section class="bg-[#fdf9f6] py-12 px-6 md:py-20">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    
+    <div class="flex-1 order-2 md:order-1 text-center md:text-left">
+      <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
+        <span class="px-3 py-1 bg-white border border-gray-100 text-[10px] font-black uppercase tracking-widest text-gray-400 rounded-full">Breed Spotlight</span>
+        <span class="px-3 py-1 bg-red-50 text-[10px] font-black uppercase tracking-widest text-red-800 rounded-full">Dogs</span>
+      </div>
+      
+      <h1 class="text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-6">
+        The Golden <br class="hidden md:block"> Standard
+      </h1>
+      
+      <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
+        Known for their lustrous golden coats and unwavering loyalty, Golden Retrievers are the heart of the family. However, their active lifestyle and sensitive skin require a specialized approach to nutrition and grooming.
+      </p>
+      
+      <div class="flex flex-wrap justify-center md:justify-start gap-4">
+        <a href="#" class="bg-[#b33a3a] text-white font-bold px-8 py-4 rounded-full shadow-lg hover:bg-[#962d2d] transition-all">
+          Explore Shop
+        </a>
+        <a href="#" class="bg-white text-gray-900 font-bold px-8 py-4 rounded-full border border-gray-100 flex items-center gap-2 hover:bg-gray-50 transition-all">
+          <i class="bi bi-file-earmark-text"></i> Care Guide
+        </a>
+      </div>
+    </div>
+
+    <div class="flex-1 order-1 md:order-2 relative">
+      <div class="relative rounded-[3rem] ">
+        <img src="./Images/img. 58.png" alt="Golden Retriever" class="w-full h-[400px] md:h-[550px] object-cover">
+        
+        <div class="absolute bottom-6 -left-4 md:-left-10 bg-white p-6 rounded-3xl shadow-xl border border-gray-50 max-w-[200px]">
+          <div class="flex items-center gap-2 mb-1">
+            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+            <span class="font-black text-gray-900">4.9/5 Rating</span>
+          </div>
+          <p class="text-[11px] text-gray-500 leading-tight">
+            Trusted by over 15,000 Golden owners.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--section3-->
+
+  <section class="bg-[#fdf9f6] py-12 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
+    
+    <div class="flex-1 bg-white rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row gap-8 shadow-sm">
+      <div class="flex-1">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Recommended Food</h2>
+        <p class="text-gray-500 mb-8 leading-relaxed">
+          Goldens need high DHA and Joint support. We've vetted the best formulas for their high energy levels.
+        </p>
+        
+        <ul class="space-y-4 mb-10">
+          <li class="flex items-center gap-4">
+            <div class="w-8 h-8 rounded-full bg-[#c1fef6] flex items-center justify-center flex-shrink-0">
+              <i class="bi bi-check-lg text-[#1a9384]"></i>
+            </div>
+            <span class="font-bold text-gray-800 text-sm md:text-base">Grain-Free Premium Salmon</span>
+          </li>
+          <li class="flex items-center gap-4">
+            <div class="w-8 h-8 rounded-full bg-[#c1fef6] flex items-center justify-center flex-shrink-0">
+              <i class="bi bi-check-lg text-[#1a9384]"></i>
+            </div>
+            <span class="font-bold text-gray-800 text-sm md:text-base">High-Impact Glucosamine Kibble</span>
+          </li>
+        </ul>
+        
+        <button class="bg-[#006d5b] text-white font-bold py-4 px-8 rounded-2xl hover:bg-[#005a4b] transition-all">
+          Shop Nutrition
+        </button>
+      </div>
+      
+      <div class="flex-1">
+        <div class="rounded-[2rem] overflow-hidden aspect-square relative">
+          <img src="./Images/img. 1.png" alt="Dog Food" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/5"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full lg:w-1/3 bg-[#fce96a] rounded-[2.5rem] p-8 md:p-10 flex flex-col shadow-sm">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Health Check</h2>
+      <p class="text-gray-800 leading-relaxed mb-8">
+        Retrievers are prone to hip dysplasia. Maintain a healthy weight and incorporate Omega-3 supplements early in their adult years.
+      </p>
+      
+      <div class="bg-[#fef9c3] rounded-[2rem] p-6 mt-auto">
+        <p class="text-[10px] font-black uppercase tracking-widest text-gray-600 mb-2">Vet Tip</p>
+        <p class="italic text-gray-800 text-sm leading-relaxed">
+          "Regular swimming is the best low-impact exercise for their joints."
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!--section4-->
+
+  <section class="bg-[#fdf9f6] py-12 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
+    
+    <div class="w-full lg:w-[40%] bg-[#ff7676] rounded-[3rem] p-10 text-white shadow-sm flex flex-col justify-between">
+      <div>
+        <h2 class="text-3xl font-black mb-4">Grooming Essentials</h2>
+        <p class="text-white/90 leading-relaxed mb-10 max-w-xs">
+          That double coat needs attention twice a week to prevent matting and manage shedding.
+        </p>
+      </div>
+
+      <div class="flex gap-4">
+        <button class="flex-1 bg-white/30 backdrop-blur-md rounded-full py-6 flex flex-col items-center justify-center gap-2 hover:bg-white/40 transition-all">
+          <i class="bi bi-brush text-2xl"></i>
+          <span class="text-[10px] font-black uppercase tracking-tighter">De-Shedder</span>
+        </button>
+        <button class="flex-1 bg-white/30 backdrop-blur-md rounded-full py-6 flex flex-col items-center justify-center gap-2 hover:bg-white/40 transition-all">
+          <i class="bi bi-droplet-fill text-2xl"></i>
+          <span class="text-[10px] font-black uppercase tracking-tighter">Soothing Oat</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="flex-1 bg-[#efebdf] rounded-[3rem] p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-sm">
+      <div class="w-full md:w-1/2">
+        <div class="rounded-[2.5rem] overflow-hidden aspect-square">
+          <img src="./Images/img. 21.png" alt="Training treats and whistle" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 text-left">
+        <h2 class="text-4xl font-black text-gray-900 mb-4">Master the Mind</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          Golden Retrievers thrive on positive reinforcement. They aren't just pets; they're partners who want to please you.
+        </p>
+        <a href="#" class="inline-flex items-center gap-2 text-[#b33a3a] font-black text-lg hover:gap-4 transition-all">
+          Free Training Guide <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  
+<!--Footer section-->
+     <footer class="bg-[#F9F4EE] rounded-t-[60px] md:rounded-t-[100px] pt-16 pb-8 px-6 md:px-12 shadow-2xl m-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-extrabold text-[#A63232]">Pawly</h2>
+                    <p class="text-zinc-600 leading-relaxed max-w-xs">
+                        Curating the world's finest supplies for your non-human family members. We believe in quality, longevity, and extra belly rubs.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#A63232] hover:opacity-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </a>
+                        <a href="#" class="text-[#A63232] hover:opacity-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </a>
+                        <a href="#" class="text-[#A63232] hover:opacity-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.5 3.5 6.5 1 1.5 1.5 3 1.5 4.5a5 5 0 0 1-10 0Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-widest text-zinc-800">Pet Care</h3>
+                    <ul class="space-y-4 text-zinc-600">
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Puppy Care</a></li>
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Senior Wellness</a></li>
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Adopt Don't Shop</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-widest text-zinc-800">Sustainability</h3>
+                    <ul class="space-y-4 text-zinc-600">
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Eco-Packaging</a></li>
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Ethical Sourcing</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-widest text-zinc-800">Newsletter</h3>
+                    <p class="text-zinc-600">Get treats and tips in your inbox.</p>
+                    <div class="relative max-w-sm">
+                        <input type="email" placeholder="Email address" 
+                            class="w-full bg-white rounded-full py-4 pl-6 pr-14 focus:outline-none focus:ring-2 focus:ring-[#A63232]/20 border border-zinc-100 placeholder:text-zinc-400">
+                        <button class="absolute right-2 top-2 bottom-2 bg-[#A63232] hover:bg-[#8e2b2b] text-white rounded-full px-4 flex items-center justify-center transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14-7-7 14-2-7-5-2Z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-200/50 text-center">
+                <p class="text-sm text-zinc-400">
+                    © 2026 Pawly Sanctuary. Made with love and treats.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

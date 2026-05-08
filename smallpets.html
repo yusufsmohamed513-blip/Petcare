@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Care</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!--CSS FILe-->
+  <link rel="stylesheet" href="./Css/style.css">
+</head>
+
+<body >
+
+<!-- ================= NAVBAR ================= -->
+ <div class="container-fluid bg-[#f3ede7]">
+<header class="bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-gray-900 text-pink-800">Pawly</h1>
+
+    <!-- Desktop Menu -->
+   
+
+       <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+      <a href="./index.html" class="hover:text-red-500">Home</a>
+      <a href="./dog.html" class="hover:text-red-500">Dog</a>
+      <a href="./cat.html" class="hover:text-red-500">Cat</a>
+      <a href="./smallpets.html" class="hover:text-red-500">Small Pet</a>
+      <a href="./shopbybread.html" class="hover:text-red-500">Shop by Breed</a>
+      <a href="./consult.html" class="hover:text-red-500">Consult Vet</a>
+    </nav>
+
+
+    <!-- RIGHT SECTION -->
+    <div class="flex items-center gap-4">
+
+      <!-- Search -->
+      <div class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2 w-52">
+        <input type="text" placeholder="Search..." 
+          class="bg-transparent outline-none w-full text-sm">
+        <i class="bi bi-search"></i>
+      </div>
+
+      <!-- Icons -->
+      <div class="hidden md:flex items-center gap-3">
+
+        <!-- Cart -->
+        <button class="relative w-10 h-10 flex items-center justify-center border rounded-full hover:bg-red-500 hover:text-white transition">
+          <i class="bi bi-cart text-lg"></i>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">2</span>
+        </button>
+
+        <!-- Wishlist -->
+        <button class="relative w-10 h-10 flex items-center justify-center border rounded-full hover:bg-pink-500 hover:text-white transition">
+          <i class="bi bi-heart text-lg"></i>
+        </button>
+
+        <!-- Profile -->
+        <a href="./loginpage.html">
+          <button class="w-10 h-10 flex items-center justify-center border rounded-full hover:bg-green-600 hover:text-white transition">
+            <i class="bi bi-person text-lg"></i>
+          </button>
+        </a>
+
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn" class="md:hidden text-2xl">
+        ☰
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ================= MOBILE MENU ================= -->
+
+  <div id="mobileMenu" class="hidden md:hidden px-6 pb-4">
+
+    <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+      <a href="./index.html" class="hover:text-red-500">Home</a>
+      <a href="./dog.html" class="hover:text-red-500">Dog</a>
+      <a href="./cat.html" class="hover:text-red-500">Cat</a>
+      <a href="./small pets.html" class="hover:text-red-500">Small Pet</a>
+      <a href="./shop by bread.html" class="hover:text-red-500">Shop by Breed</a>
+      <a href="./consult.html" class="hover:text-red-500">Consult Vet</a>
+    </nav>
+
+    <!-- Mobile Search -->
+    <div class="mt-4 flex items-center bg-gray-100 rounded-full px-4 py-2">
+      <input type="text" placeholder="Search..." 
+        class="bg-transparent outline-none w-full text-sm">
+      <i class="bi bi-search"></i>
+    </div>
+
+    <!-- Mobile Icons -->
+    <div class="flex items-center gap-4 mt-4">
+
+      <button class="w-10 h-10 flex items-center justify-center border rounded-full">
+        <i class="bi bi-cart"></i>
+      </button>
+
+      <button class="w-10 h-10 flex items-center justify-center border rounded-full">
+        <i class="bi bi-heart"></i>
+      </button>
+
+      <a href="$">
+        <button class="w-10 h-10 flex items-center justify-center border rounded-full">
+          <i class="bi bi-person"></i>
+        </button>
+      </a>
+
+    </div>
+
+  </div>
+</header>
+</div>
+
+
+  
+  <!-- ══════════════ HERO ══════════════ -->
+  <div class="w-full max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-2xl mb-10">
+    <div class="relative w-full h-56 sm:h-72 md:h-96 lg:h-[460px] bg-cover bg-center flex items-center back-img3">
+      <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent"></div>
+      <div class="relative z-10 px-6 sm:px-10 md:px-16 max-w-xl">
+        <h1 class="text-white font-black leading-tight mb-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style="font-family:'Montserrat',sans-serif;">
+          Happy Tails,<br>Happy Hearts.
+        </h1>
+        <p class="text-white/80 text-sm sm:text-base leading-relaxed mb-6">
+          Discover premium care, nutrition, and joy<br class="hidden sm:block"/>
+          tailored specifically for your canine companion.
+        </p>
+        <a href="#" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-3 rounded-full transition-all duration-200 shadow-lg hover:-translate-y-0.5" style="font-family:'Montserrat',sans-serif;">
+          Explore Dog Shop
+        </a>
+      </div>
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/50 backdrop-blur-sm rounded-full px-3 py-2">
+        <button class="w-7 h-7 rounded-full bg-white/20 hover:bg-white/35 text-white text-xs flex items-center justify-center transition-colors">&#8592;</button>
+        <button class="w-7 h-7 rounded-full bg-white/20 hover:bg-white/35 text-white text-xs flex items-center justify-center transition-colors">&#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ BROWSE BY NEED ══════════════ -->
+  <div class="w-full max-w-6xl mx-auto">
+
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+      <h2 class="text-xl sm:text-2xl font-black text-gray-900" style="font-family:'Montserrat',sans-serif;">Browse by Need</h2>
+      <span class="text-teal-700 text-xs font-bold tracking-widest uppercase" style="font-family:'Montserrat',sans-serif;">Your Pet Will Love This 🐾</span>
+    </div>
+
+    <!-- Top 4 Category Cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-10">
+      <button id="btn-food" onclick="setCategory('food')"
+        class="bg-white rounded-2xl p-4 sm:p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 border-2 border-transparent focus:outline-none">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-red-100 flex items-center justify-center">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.5 0-3 .5-3 2v2H6v2h1l1 6h8l1-6h1v-2h-3v-2c0-1.5-1.5-2-3-2z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v3M12 3v3M15 3v3"/>
+          </svg>
+        </div>
+        <span class="text-gray-800 font-semibold text-sm sm:text-base" style="font-family:'Montserrat',sans-serif;">Food</span>
+      </button>
+
+      <button id="btn-grooming" onclick="setCategory('grooming')"
+        class="bg-white rounded-2xl p-4 sm:p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 border-2 border-transparent focus:outline-none">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-teal-100 flex items-center justify-center">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.5c0 0 .5 2 .5 5s-2.5 4-2.5 6 1.5 4 4.5 4 4.5-2 4.5-4-2.5-3-2.5-6 .5-5 .5-5"/>
+            <line x1="12" y1="3" x2="12" y2="18" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="text-gray-800 font-semibold text-sm sm:text-base" style="font-family:'Montserrat',sans-serif;">Grooming</span>
+      </button>
+
+      <button id="btn-health" onclick="setCategory('health')"
+        class="bg-white rounded-2xl p-4 sm:p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 border-2 border-transparent focus:outline-none">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-yellow-100 flex items-center justify-center">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6M12 9v6M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <span class="text-gray-800 font-semibold text-sm sm:text-base" style="font-family:'Montserrat',sans-serif;">Health</span>
+      </button>
+
+      <button id="btn-toys" onclick="setCategory('toys')"
+        class="bg-white rounded-2xl p-4 sm:p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1 border-2 border-transparent focus:outline-none">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-pink-100 flex items-center justify-center">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 10h.01M15 10h.01M9.5 15a5 5 0 005 0"/>
+          </svg>
+        </div>
+        <span class="text-gray-800 font-semibold text-sm sm:text-base" style="font-family:'Montserrat',sans-serif;">Toys</span>
+      </button>
+    </div>
+
+    <!-- Active Filters Tags -->
+    <div id="active-tags" class="flex flex-wrap gap-2 mb-5 hidden">
+      <span class="text-xs font-bold text-gray-500 flex items-center">Active filters:</span>
+      <span id="tag-cat" class="hidden items-center gap-1 bg-gray-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
+        <span id="tag-cat-label"></span>
+        <button onclick="setCategory('all')" class="ml-1 text-white/70 hover:text-white font-bold">✕</button>
+      </span>
+      <span id="tag-price" class="hidden items-center gap-1 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+        <span id="tag-price-label"></span>
+        <button onclick="clearPrice()" class="ml-1 text-white/70 hover:text-white font-bold">✕</button>
+      </span>
+      <span id="tag-rating" class="hidden items-center gap-1 bg-yellow-400 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">
+        <span id="tag-rating-label"></span>
+        <button onclick="clearRating()" class="ml-1 text-gray-700 hover:text-gray-900 font-bold">✕</button>
+      </span>
+    </div>
+
+    <!-- Grid + Sidebar -->
+    <div class="flex flex-col lg:flex-row gap-6">
+
+      <!-- ── PRODUCT GRID ── -->
+      <div class="flex-1">
+
+        <!-- Result Count -->
+        <div class="flex items-center justify-between mb-4">
+          <p id="result-count" class="text-sm text-gray-500 font-medium"></p>
+        </div>
+
+        <!-- No results message -->
+        <div id="no-results" class="hidden col-span-3 text-center py-16">
+          <p class="text-4xl mb-3">🐾</p>
+          <p class="text-gray-500 font-semibold text-base" style="font-family:'Montserrat',sans-serif;">No products match your filters</p>
+          <button onclick="resetAll()" class="mt-4 bg-red-500 hover:bg-red-600 text-white text-sm font-bold px-5 py-2 rounded-full transition-all">Reset All Filters</button>
+        </div>
+
+        <div id="grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+          <!-- data-cat, data-price, data-rating on every card -->
+
+          <!-- FOOD -->
+          <div data-cat="food" data-price="24.99" data-rating="5" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=400&q=80&fit=crop" class="w-full h-36 sm:h-44 object-cover" alt="Dog Food"/>
+              <span class="absolute top-2 left-2 bg-red-100 text-red-500 text-xs font-bold px-2 py-0.5 rounded-full">Food</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 5.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Premium Dry Food</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$24.99</p>
+            </div>
+          </div>
+
+          <div data-cat="food" data-price="12.99" data-rating="4" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit1.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Dog Treats"/>
+              <span class="absolute top-2 left-2 bg-red-100 text-red-500 text-xs font-bold px-2 py-0.5 rounded-full">Food</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 4.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Organic Dog Treats</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$12.99</p>
+            </div>
+          </div>
+
+          <div data-cat="food" data-price="18.49" data-rating="4" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit2.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Wet Food"/>
+              <span class="absolute top-2 left-2 bg-red-100 text-red-500 text-xs font-bold px-2 py-0.5 rounded-full">Food</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 4.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Gourmet Wet Food</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$18.49</p>
+            </div>
+          </div>
+
+          <div data-cat="food" data-price="21.99" data-rating="5" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit3.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Puppy Food"/>
+              <span class="absolute top-2 left-2 bg-red-100 text-red-500 text-xs font-bold px-2 py-0.5 rounded-full">Food</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 5.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Puppy Starter Pack</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$21.99</p>
+            </div>
+          </div>
+
+          <!-- GROOMING -->
+          <div data-cat="grooming" data-price="14.99" data-rating="4" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit4.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Shampoo"/>
+              <span class="absolute top-2 left-2 bg-teal-100 text-teal-600 text-xs font-bold px-2 py-0.5 rounded-full">Grooming</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 4.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Natural Shampoo</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$14.99</p>
+            </div>
+          </div>
+
+          <div data-cat="grooming" data-price="34.99" data-rating="5" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit5.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Grooming Kit"/>
+              <span class="absolute top-2 left-2 bg-teal-100 text-teal-600 text-xs font-bold px-2 py-0.5 rounded-full">Grooming</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 5.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Grooming Kit</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$34.99</p>
+            </div>
+          </div>
+
+          <div data-cat="grooming" data-price="9.99" data-rating="3" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit6.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Brush"/>
+              <span class="absolute top-2 left-2 bg-teal-100 text-teal-600 text-xs font-bold px-2 py-0.5 rounded-full">Grooming</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 3.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Soft Bristle Brush</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$9.99</p>
+            </div>
+          </div>
+
+          <div data-cat="grooming" data-price="7.99" data-rating="3" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit7.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Nail Clipper"/>
+              <span class="absolute top-2 left-2 bg-teal-100 text-teal-600 text-xs font-bold px-2 py-0.5 rounded-full">Grooming</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 3.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Nail Clipper Set</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$7.99</p>
+            </div>
+          </div>
+
+          <!-- HEALTH -->
+          <div data-cat="health" data-price="19.99" data-rating="5" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit8.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Vitamins"/>
+              <span class="absolute top-2 left-2 bg-yellow-100 text-yellow-600 text-xs font-bold px-2 py-0.5 rounded-full">Health</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 5.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Daily Vitamins</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$19.99</p>
+            </div>
+          </div>
+
+          <div data-cat="health" data-price="29.99" data-rating="4" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit9.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Flea Treatment"/>
+              <span class="absolute top-2 left-2 bg-yellow-100 text-yellow-600 text-xs font-bold px-2 py-0.5 rounded-full">Health</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 4.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Flea Treatment</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$29.99</p>
+            </div>
+          </div>
+
+          <div data-cat="health" data-price="22.99" data-rating="4" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabit10.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Joint Supplement"/>
+              <span class="absolute top-2 left-2 bg-yellow-100 text-yellow-600 text-xs font-bold px-2 py-0.5 rounded-full">Health</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 4.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Joint Supplement</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$22.99</p>
+            </div>
+          </div>
+
+          <div data-cat="health" data-price="15.49" data-rating="3" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit11.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Dental Chew"/>
+              <span class="absolute top-2 left-2 bg-yellow-100 text-yellow-600 text-xs font-bold px-2 py-0.5 rounded-full">Health</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 3.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Dental Chew Sticks</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$15.49</p>
+            </div>
+          </div>
+
+          <!-- TOYS -->
+          <div data-cat="toys" data-price="8.99" data-rating="4" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit12.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Chew Toy"/>
+              <span class="absolute top-2 left-2 bg-pink-100 text-pink-500 text-xs font-bold px-2 py-0.5 rounded-full">Toys</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 4.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Chew Rope Toy</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$8.99</p>
+            </div>
+          </div>
+
+          <div data-cat="toys" data-price="11.99" data-rating="5" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit13.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Squeaky Ball"/>
+              <span class="absolute top-2 left-2 bg-pink-100 text-pink-500 text-xs font-bold px-2 py-0.5 rounded-full">Toys</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 5.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Squeaky Ball Set</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$11.99</p>
+            </div>
+          </div>
+
+          <div data-cat="toys" data-price="13.49" data-rating="3" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit3.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Tug Toy"/>
+              <span class="absolute top-2 left-2 bg-pink-100 text-pink-500 text-xs font-bold px-2 py-0.5 rounded-full">Toys</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 3.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Tug War Toy</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$13.49</p>
+            </div>
+          </div>
+
+          <div data-cat="toys" data-price="16.99" data-rating="5" class="product bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="./Images/rabbit4.jpg" class="w-full h-36 sm:h-44 object-cover" alt="Plush Toy"/>
+              <span class="absolute top-2 left-2 bg-pink-100 text-pink-500 text-xs font-bold px-2 py-0.5 rounded-full">Toys</span>
+              <span class="absolute top-2 right-2 bg-white/90 text-yellow-500 text-xs font-bold px-2 py-0.5 rounded-full">⭐ 5.0</span>
+            </div>
+            <div class="p-3 sm:p-4">
+              <p class="text-sm sm:text-base font-bold text-gray-800 leading-tight" style="font-family:'Montserrat',sans-serif;">Plush Squeaky Bear</p>
+              <p class="text-sm font-bold text-red-500 mt-1">$16.99</p>
+            </div>
+          </div>
+
+        </div>
+        <!-- end grid -->
+      </div>
+
+      <!-- ── RIGHT FILTER SIDEBAR ── -->
+      <div class="w-full lg:w-64 shrink-0">
+        <div class="bg-white rounded-2xl shadow-sm p-5 sticky top-6">
+
+          <h3 class="text-base font-black text-gray-900 mb-5 flex items-center gap-2" style="font-family:'Montserrat',sans-serif;">
+            <svg class="w-4 h-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h18M7 10h10M11 16h2"/>
+            </svg>
+            Filter Products
+          </h3>
+
+          <!-- ── CATEGORY ── -->
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Category</p>
+          <div class="flex flex-col gap-1.5 mb-6">
+            <button id="sf-all" onclick="setCategory('all')"
+              class="flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-150 bg-gray-900 text-white focus:outline-none">
+              <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-sm">🐾</span> All Products
+            </button>
+            <button id="sf-food" onclick="setCategory('food')"
+              class="flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-150 text-gray-700 hover:bg-red-50 focus:outline-none">
+              <span class="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center text-sm">🍖</span> Food
+            </button>
+            <button id="sf-grooming" onclick="setCategory('grooming')"
+              class="flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-150 text-gray-700 hover:bg-teal-50 focus:outline-none">
+              <span class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center text-sm">✂️</span> Grooming
+            </button>
+            <button id="sf-health" onclick="setCategory('health')"
+              class="flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-150 text-gray-700 hover:bg-yellow-50 focus:outline-none">
+              <span class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-sm">💊</span> Health
+            </button>
+            <button id="sf-toys" onclick="setCategory('toys')"
+              class="flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-150 text-gray-700 hover:bg-pink-50 focus:outline-none">
+              <span class="w-6 h-6 rounded-full bg-pink-100 flex items-center justify-center text-sm">🎾</span> Toys
+            </button>
+          </div>
+
+          <div class="border-t border-gray-100 mb-5"></div>
+
+          <!-- ── PRICE RANGE ── -->
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Price Range</p>
+          <div class="flex flex-col gap-2 mb-6">
+
+            <button id="price-all" onclick="setPrice('all','All Prices')"
+              class="price-btn flex items-center justify-between px-3 py-2.5 rounded-xl border-2 border-gray-900 bg-gray-900 text-white text-sm font-semibold transition-all duration-150 focus:outline-none">
+              <span>All Prices</span>
+              <span class="text-xs opacity-70">16 items</span>
+            </button>
+
+            <button id="price-under10" onclick="setPrice('under10','Under $10')"
+              class="price-btn flex items-center justify-between px-3 py-2.5 rounded-xl border-2 border-gray-200 text-gray-700 text-sm font-semibold hover:border-red-300 hover:bg-red-50 transition-all duration-150 focus:outline-none">
+              <span>Under $10</span>
+              <span class="text-xs text-gray-400">3 items</span>
+            </button>
+
+            <button id="price-10to20" onclick="setPrice('10to20','$10 – $20')"
+              class="price-btn flex items-center justify-between px-3 py-2.5 rounded-xl border-2 border-gray-200 text-gray-700 text-sm font-semibold hover:border-red-300 hover:bg-red-50 transition-all duration-150 focus:outline-none">
+              <span>$10 – $20</span>
+              <span class="text-xs text-gray-400">8 items</span>
+            </button>
+
+            <button id="price-above20" onclick="setPrice('above20','$20 & Above')"
+              class="price-btn flex items-center justify-between px-3 py-2.5 rounded-xl border-2 border-gray-200 text-gray-700 text-sm font-semibold hover:border-red-300 hover:bg-red-50 transition-all duration-150 focus:outline-none">
+              <span>$20 & Above</span>
+              <span class="text-xs text-gray-400">5 items</span>
+            </button>
+
+          </div>
+
+          <div class="border-t border-gray-100 mb-5"></div>
+
+          <!-- ── RATING ── -->
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Minimum Rating</p>
+          <div class="flex flex-col gap-2 mb-6">
+
+            <button id="rating-all" onclick="setRating('all','Any Rating')"
+              class="rating-btn flex items-center justify-between px-3 py-2.5 rounded-xl border-2 border-gray-900 bg-gray-900 text-white text-sm font-semibold transition-all duration-150 focus:outline-none">
+              <span>Any Rating</span>
+              <span class="text-xs opacity-70">all</span>
+            </button>
+
+            <button id="rating-5" onclick="setRating('5','⭐ 5 Stars Only')"
+              class="rating-btn flex items-center justify-between px-3 py-2.5 rounded-xl border-2 border-gray-200 text-gray-700 text-sm font-semibold hover:border-yellow-300 hover:bg-yellow-50 transition-all duration-150 focus:outline-none">
+              <span>⭐⭐⭐⭐⭐ 5 Stars</span>
+              <span class="text-xs text-gray-400">6</span>
+            </button>
+
+            <button id="rating-4" onclick="setRating('4','⭐ 4+ Stars')"
+              class="rating-btn flex items-center justify-between px-3 py-2.5 rounded-xl border-2 border-gray-200 text-gray-700 text-sm font-semibold hover:border-yellow-300 hover:bg-yellow-50 transition-all duration-150 focus:outline-none">
+              <span>⭐⭐⭐⭐ 4+ Stars</span>
+              <span class="text-xs text-gray-400">10</span>
+            </button>
+
+            <button id="rating-3" onclick="setRating('3','⭐ 3+ Stars')"
+              class="rating-btn flex items-center justify-between px-3 py-2.5 rounded-xl border-2 border-gray-200 text-gray-700 text-sm font-semibold hover:border-yellow-300 hover:bg-yellow-50 transition-all duration-150 focus:outline-none">
+              <span>⭐⭐⭐ 3+ Stars</span>
+              <span class="text-xs text-gray-400">16</span>
+            </button>
+
+          </div>
+
+          <!-- Reset -->
+          <button onclick="resetAll()"
+            class="w-full bg-rose-50 hover:bg-red-100 text-red-500 font-bold text-sm py-2.5 rounded-xl transition-all duration-150 focus:outline-none"
+            style="font-family:'Montserrat',sans-serif;">
+            Reset All Filters
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  
+<!--Footer section-->
+     <footer class="bg-[#F9F4EE] rounded-t-[60px] md:rounded-t-[100px] pt-16 pb-8 px-6 md:px-12 shadow-2xl m-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-extrabold text-[#A63232]">Pawly</h2>
+                    <p class="text-zinc-600 leading-relaxed max-w-xs">
+                        Curating the world's finest supplies for your non-human family members. We believe in quality, longevity, and extra belly rubs.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#A63232] hover:opacity-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </a>
+                        <a href="#" class="text-[#A63232] hover:opacity-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </a>
+                        <a href="#" class="text-[#A63232] hover:opacity-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.5 3.5 6.5 1 1.5 1.5 3 1.5 4.5a5 5 0 0 1-10 0Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-widest text-zinc-800">Pet Care</h3>
+                    <ul class="space-y-4 text-zinc-600">
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Puppy Care</a></li>
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Senior Wellness</a></li>
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Adopt Don't Shop</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-widest text-zinc-800">Sustainability</h3>
+                    <ul class="space-y-4 text-zinc-600">
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Eco-Packaging</a></li>
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Ethical Sourcing</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-widest text-zinc-800">Newsletter</h3>
+                    <p class="text-zinc-600">Get treats and tips in your inbox.</p>
+                    <div class="relative max-w-sm">
+                        <input type="email" placeholder="Email address" 
+                            class="w-full bg-white rounded-full py-4 pl-6 pr-14 focus:outline-none focus:ring-2 focus:ring-[#A63232]/20 border border-zinc-100 placeholder:text-zinc-400">
+                        <button class="absolute right-2 top-2 bottom-2 bg-[#A63232] hover:bg-[#8e2b2b] text-white rounded-full px-4 flex items-center justify-center transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14-7-7 14-2-7-5-2Z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-200/50 text-center">
+                <p class="text-sm text-zinc-400">
+                    © 2026 Pawly Sanctuary. Made with love and treats.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+  <!-- ══════════════ SCRIPT ══════════════ -->
+  <script>
+    // ── State ──
+    let activeCategory = 'all';
+    let activePrice    = 'all';
+    let activeRating   = 'all';
+
+    const catSidebarMap = {
+      all:      ['bg-gray-900','text-white'],
+      food:     ['bg-red-500','text-white'],
+      grooming: ['bg-teal-500','text-white'],
+      health:   ['bg-yellow-400','text-gray-900'],
+      toys:     ['bg-pink-500','text-white'],
+    };
+    const catTopMap = {
+      food:     ['border-red-400','bg-red-50'],
+      grooming: ['border-teal-400','bg-teal-50'],
+      health:   ['border-yellow-400','bg-yellow-50'],
+      toys:     ['border-pink-400','bg-pink-50'],
+    };
+
+    // ── Price match logic ──
+    function priceMatch(price, range) {
+      if (range === 'all') return true;
+      if (range === 'under10')  return price < 10;
+      if (range === '10to20')   return price >= 10 && price <= 20;
+      if (range === 'above20')  return price > 20;
+      return true;
+    }
+
+    // ── Rating match logic ──
+    function ratingMatch(rating, minRating) {
+      if (minRating === 'all') return true;
+      return rating >= parseInt(minRating);
+    }
+
+    // ── Apply all filters ──
+    function applyFilters() {
+      const products = document.querySelectorAll('.product');
+      let visible = 0;
+
+      products.forEach(card => {
+        const cat    = card.dataset.cat;
+        const price  = parseFloat(card.dataset.price);
+        const rating = parseInt(card.dataset.rating);
+
+        const catOk    = (activeCategory === 'all' || cat === activeCategory);
+        const priceOk  = priceMatch(price, activePrice);
+        const ratingOk = ratingMatch(rating, activeRating);
+
+        if (catOk && priceOk && ratingOk) {
+          card.classList.remove('hidden');
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // result count
+      const total = products.length;
+      document.getElementById('result-count').textContent = `Showing ${visible} of ${total} products`;
+
+      // no results
+      const noRes = document.getElementById('no-results');
+      const grid  = document.getElementById('grid');
+      if (visible === 0) {
+        noRes.classList.remove('hidden');
+        grid.classList.add('hidden');
+      } else {
+        noRes.classList.add('hidden');
+        grid.classList.remove('hidden');
+      }
+
+      updateTags();
+    }
+
+    // ── Update active filter tags ──
+    function updateTags() {
+      const tagsRow = document.getElementById('active-tags');
+      const tagCat  = document.getElementById('tag-cat');
+      const tagPrice = document.getElementById('tag-price');
+      const tagRating = document.getElementById('tag-rating');
+
+      if (activeCategory !== 'all') {
+        tagCat.classList.remove('hidden');
+        tagCat.classList.add('inline-flex');
+        document.getElementById('tag-cat-label').textContent = '📂 ' + activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1);
+      } else {
+        tagCat.classList.add('hidden');
+        tagCat.classList.remove('inline-flex');
+      }
+
+      if (activePrice !== 'all') {
+        tagPrice.classList.remove('hidden');
+        tagPrice.classList.add('inline-flex');
+        const labels = { under10:'< $10', '10to20':'$10–$20', above20:'> $20' };
+        document.getElementById('tag-price-label').textContent = '💲 ' + labels[activePrice];
+      } else {
+        tagPrice.classList.add('hidden');
+        tagPrice.classList.remove('inline-flex');
+      }
+
+      if (activeRating !== 'all') {
+        tagRating.classList.remove('hidden');
+        tagRating.classList.add('inline-flex');
+        document.getElementById('tag-rating-label').textContent = '⭐ ' + activeRating + '+ Stars';
+      } else {
+        tagRating.classList.add('hidden');
+        tagRating.classList.remove('inline-flex');
+      }
+
+      const anyActive = activeCategory !== 'all' || activePrice !== 'all' || activeRating !== 'all';
+      tagsRow.classList.toggle('hidden', !anyActive);
+    }
+
+    // ── Set Category ──
+    function setCategory(cat) {
+      activeCategory = cat;
+
+      // top buttons
+      ['food','grooming','health','toys'].forEach(c => {
+        const btn = document.getElementById('btn-' + c);
+        if (!btn) return;
+        btn.classList.remove(...Object.values(catTopMap).flat(), 'scale-95');
+        btn.classList.add('border-transparent');
+      });
+      if (cat !== 'all') {
+        const ab = document.getElementById('btn-' + cat);
+        if (ab) {
+          ab.classList.remove('border-transparent');
+          ab.classList.add(...catTopMap[cat], 'scale-95');
+        }
+      }
+
+      // sidebar buttons
+      ['all','food','grooming','health','toys'].forEach(c => {
+        const sb = document.getElementById('sf-' + c);
+        if (!sb) return;
+        sb.classList.remove('bg-gray-900','bg-red-500','bg-teal-500','bg-yellow-400','bg-pink-500','text-white','text-gray-900','text-gray-700');
+        sb.classList.add('text-gray-700');
+      });
+      const activeSb = document.getElementById('sf-' + cat);
+      if (activeSb) {
+        const [bg, txt] = catSidebarMap[cat];
+        activeSb.classList.remove('text-gray-700');
+        activeSb.classList.add(bg, txt);
+      }
+
+      applyFilters();
+    }
+
+    // ── Set Price ──
+    function setPrice(range, label) {
+      activePrice = range;
+
+      // update price button styles
+      ['all','under10','10to20','above20'].forEach(r => {
+        const btn = document.getElementById('price-' + r);
+        if (!btn) return;
+        btn.classList.remove('border-gray-900','bg-gray-900','text-white','border-red-400','bg-red-50');
+        btn.classList.add('border-gray-200','text-gray-700');
+      });
+
+      const activeBtn = document.getElementById('price-' + range);
+      if (activeBtn) {
+        activeBtn.classList.remove('border-gray-200','text-gray-700');
+        activeBtn.classList.add('border-gray-900','bg-gray-900','text-white');
+      }
+
+      applyFilters();
+    }
+
+    // ── Set Rating ──
+    function setRating(min, label) {
+      activeRating = min;
+
+      // update rating button styles
+      ['all','5','4','3'].forEach(r => {
+        const btn = document.getElementById('rating-' + r);
+        if (!btn) return;
+        btn.classList.remove('border-gray-900','bg-gray-900','text-white','border-yellow-400','bg-yellow-50');
+        btn.classList.add('border-gray-200','text-gray-700');
+      });
+
+      const activeBtn = document.getElementById('rating-' + min);
+      if (activeBtn) {
+        activeBtn.classList.remove('border-gray-200','text-gray-700');
+        activeBtn.classList.add('border-gray-900','bg-gray-900','text-white');
+      }
+
+      applyFilters();
+    }
+
+    // ── Clear individual filters ──
+    function clearPrice()  { setPrice('all','All Prices'); }
+    function clearRating() { setRating('all','Any Rating'); }
+
+    // ── Reset all ──
+    function resetAll() {
+      setCategory('all');
+      setPrice('all','All Prices');
+      setRating('all','Any Rating');
+    }
+
+    // ── Init ──
+    applyFilters();
+  </script>
+
+
+
+
+  <!---->
+</body>
+</html>

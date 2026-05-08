@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Care</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body >
+<div class="min-h-screen bg-orange-50/30 p-4 md:p-8">
+  <div class="max-w-7xl mx-auto flex justify-between items-end mb-8">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Browse by Need</h2>
+    <span class="text-xs font-bold text-teal-700 tracking-widest uppercase hidden sm:block">
+      Your pet will love this 🐾
+    </span>
+  </div>
+
+  <div class="max-w-7xl mx-auto flex gap-4 overflow-x-auto pb-6 no-scrollbar mb-10">
+    <button class="flex-shrink-0 w-40 h-44 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center group border-2 border-transparent hover:border-pink-200">
+      <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+      </div>
+      <span class="font-bold text-gray-700">Food</span>
+    </button>
+
+    <button class="flex-shrink-0 w-40 h-44 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center group border-2 border-transparent hover:border-teal-100">
+      <div class="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758L5 19m0-14l4.121 4.121"/></svg>
+      </div>
+      <span class="font-bold text-gray-700">Grooming</span>
+    </button>
+
+    <button class="flex-shrink-0 w-40 h-44 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center group border-2 border-transparent hover:border-yellow-100">
+      <div class="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+      </div>
+      <span class="font-bold text-gray-700">Health</span>
+    </button>
+
+    <button class="flex-shrink-0 w-40 h-44 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center group border-2 border-transparent hover:border-red-100">
+      <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-red-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+      </div>
+      <span class="font-bold text-gray-700">Toys</span>
+    </button>
+  </div>
+
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
+    
+    <aside class="w-full md:w-64 space-y-6">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+        <h3 class="font-bold text-lg mb-4 text-gray-800 border-b pb-2">Refine Search</h3>
+        
+        <div class="mb-6">
+          <label class="block text-sm font-semibold text-gray-600 mb-2">Price Range</label>
+          <input type="range" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-teal-600">
+          <div class="flex justify-between text-xs text-gray-500 mt-2">
+            <span>$0</span><span>$500</span>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-sm font-semibold text-gray-600">Pet Type</label>
+          <div class="flex items-center gap-2">
+            <input type="checkbox" class="rounded text-teal-600 focus:ring-teal-500">
+            <span class="text-sm text-gray-600">Dogs</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="checkbox" class="rounded text-teal-600 focus:ring-teal-500">
+            <span class="text-sm text-gray-600">Cats</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="flex-1">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-4 rounded-3xl shadow-sm border border-gray-50 hover:shadow-lg transition-shadow">
+          <div class="aspect-square bg-gray-100 rounded-2xl mb-4 overflow-hidden">
+             <div class="w-full h-full flex items-center justify-center text-gray-300">Product Image</div>
+          </div>
+          <h4 class="font-bold text-gray-800">Organic Dog Kibble</h4>
+          <p class="text-teal-600 font-bold mt-1">$24.99</p>
+          <button class="w-full mt-4 py-2 bg-gray-800 text-white rounded-xl text-sm font-medium hover:bg-black transition-colors">Add to Cart</button>
+        </div>
+        </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

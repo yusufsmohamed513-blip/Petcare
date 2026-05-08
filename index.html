@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Care</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<!--style css-->
+<link rel="stylesheet" href="./Css/style.css">
+</head>
+
+<body >
+
+<!-- ================= NAVBAR ================= -->
+ <div class="container-fluid bg-[#f3ede7]">
+<header class="bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-gray-900 text-pink-800">Pawly</h1>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+      <a href="./index.html" class="hover:text-red-500">Home</a>
+      <a href="./dog.html" class="hover:text-red-500">Dog</a>
+      <a href="./cat.html" class="hover:text-red-500">Cat</a>
+      <a href="./small pets.html" class="hover:text-red-500">Small Pet</a>
+      <a href="./shop by bread.html" class="hover:text-red-500">Shop by Breed</a>
+      <a href="./consult.html" class="hover:text-red-500">Consult Vet</a>
+    </nav>
+
+    <!-- RIGHT SECTION -->
+    <div class="flex items-center gap-4">
+
+      <!-- Search -->
+      <div class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2 w-52">
+        <input type="text" placeholder="Search..." 
+          class="bg-transparent outline-none w-full text-sm">
+        <i class="bi bi-search"></i>
+      </div>
+
+      <!-- Icons -->
+      <div class="hidden md:flex items-center gap-3">
+
+        <!-- Cart -->
+        <button class="relative w-10 h-10 flex items-center justify-center border rounded-full hover:bg-red-500 hover:text-white transition">
+          <i class="bi bi-cart text-lg"></i>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">2</span>
+        </button>
+
+        <!-- Wishlist -->
+        <button class="relative w-10 h-10 flex items-center justify-center border rounded-full hover:bg-pink-500 hover:text-white transition">
+          <i class="bi bi-heart text-lg"></i>
+        </button>
+
+        <!-- Profile -->
+        <a href="./loginpage.html">
+          <button class="w-10 h-10 flex items-center justify-center border rounded-full hover:bg-green-600 hover:text-white transition">
+            <i class="bi bi-person text-lg"></i>
+          </button>
+        </a>
+
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn" class="md:hidden text-2xl">
+        ☰
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ================= MOBILE MENU ================= -->
+
+  <div id="mobileMenu" class="hidden md:hidden px-6 pb-4">
+
+    <nav class="flex flex-col gap-3 text-gray-700 font-medium">
+      <a href="#">Home</a>
+      <a href="#">Dog</a>
+      <a href="#">Cat</a>
+      <a href="#">Small Pet</a>
+      <a href="#">Shop by Breed</a>
+      <a href="#">Consult Vet</a>
+    </nav>
+
+    <!-- Mobile Search -->
+    <div class="mt-4 flex items-center bg-gray-100 rounded-full px-4 py-2">
+      <input type="text" placeholder="Search..." 
+        class="bg-transparent outline-none w-full text-sm">
+      <i class="bi bi-search"></i>
+    </div>
+
+    <!-- Mobile Icons -->
+    <div class="flex items-center gap-4 mt-4">
+
+      <button class="w-10 h-10 flex items-center justify-center border rounded-full">
+        <i class="bi bi-cart"></i>
+      </button>
+
+      <button class="w-10 h-10 flex items-center justify-center border rounded-full">
+        <i class="bi bi-heart"></i>
+      </button>
+
+      <a href="$">
+        <button class="w-10 h-10 flex items-center justify-center border rounded-full">
+          <i class="bi bi-person"></i>
+        </button>
+      </a>
+
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= HERO (UNCHANGED) ================= -->
+
+<section class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+
+    <div>
+      <span class="inline-block bg-pink-200 text-pink-800 px-4 py-1 rounded-full text-xs font-semibold">
+        PREMIUM CARE SANCTUARY
+      </span>
+
+      <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mt-6 leading-tight">
+        Everything Your <br class="hidden md:block"> Pet Needs
+      </h1>
+
+      <p class="text-gray-600 mt-6 text-lg max-w-lg">
+        Treat your companions to a world of curated wellness, gourmet nutrition,
+        and specialized care designed for their unique happiness.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <button class="bg-red-500 hover:bg-red-600 text-white px-7 py-3 rounded-full shadow-md">
+          Shop Now
+        </button>
+
+        <button class="bg-teal-800 hover:bg-teal-900 text-white px-7 py-3 rounded-full shadow-md">
+          Explore Categories
+        </button>
+      </div>
+    </div>
+
+   <div class="relative">
+
+  <!-- Image Card -->
+
+  <div class="rounded-[40px] bg-gradient-to-br from-[#e6d8c8] to-[#f6efe6] p-5">
+    <img 
+      src="https://images.unsplash.com/photo-1558788353-f76d92427f16"
+      class="rounded-[30px] w-full h-full object-cover"
+      alt="Dog"
+    >
+  </div>
+
+  <!-- Floating Banner -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0">
+    
+    <div class="flex items-center gap-4 bg-white/90 backdrop-blur-md px-5 py-4 rounded-3xl shadow-lg">
+
+      <!-- Icon -->
+      <div class="w-12 h-12 flex items-center justify-center bg-teal-700 text-white rounded-full">
+        ⭐
+      </div>
+    
+      <!-- Text -->
+      <div>
+        <p class="text-xs  text-gray-500 font-semibold tracking-wide">TRUSTED BY</p>
+        <h3 class="text-lg font-bold text-gray-800">50k+ Pet Parents</h3>
+      </div>
+     
+    </div>
+   
+  </div>
+
+</div>
+  </div>
+</section>
+</div>
+<!--banner section cards-->
+
+
+<section class="max-w-7xl mx-auto px-6 py-16">
+
+  <!-- Heading -->
+  <div class="text-center mb-12">
+    <p class="text-teal-600 font-semibold tracking-widest text-sm uppercase">
+      The Pawly Promise
+    </p>
+    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mt-3">
+      Why Pet Parents Love Us
+    </h2>
+  </div>
+
+  <!-- Cards -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 bg-white">
+
+    <!-- Card 1 -->
+    <div class="bg-[#efe7d6] border border-yellow-200 rounded-3xl p-6 text-center hover:shadow-lg transition">
+      <div class="w-14 h-14 mx-auto flex items-center justify-center bg-yellow-400 text-white rounded-full shadow-md mb-5 text-xl">
+        🏥
+      </div>
+      <h3 class="text-lg font-bold text-gray-800">Vet-Vetted Products</h3>
+      <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+        Every snack and toy is hand-picked and approved by our expert veterinary panel.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-[#d7ece8] border border-teal-200 rounded-3xl p-6 text-center hover:shadow-lg transition">
+      <div class="w-14 h-14 mx-auto flex items-center justify-center bg-teal-500 text-white rounded-full shadow-md mb-5 text-xl">
+        🚚
+      </div>
+      <h3 class="text-lg font-bold text-gray-800">Fast Paw-Delivery</h3>
+      <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+        Swift shipping to your doorstep, because we know someone is waiting for their treats.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-[#efe7d6] border border-yellow-200 rounded-3xl p-6 text-center hover:shadow-lg transition">
+      <div class="w-14 h-14 mx-auto flex items-center justify-center bg-yellow-400 text-white rounded-full shadow-md mb-5 text-xl">
+        🎧
+      </div>
+      <h3 class="text-lg font-bold text-gray-800">24/7 Expert Support</h3>
+      <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+        Real humans (and animal lovers) available day and night for all your pet queries.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-[#d7ece8] border border-teal-200 rounded-3xl p-6 text-center hover:shadow-lg transition">
+      <div class="w-14 h-14 mx-auto flex items-center justify-center bg-teal-500 text-white rounded-full shadow-md mb-5 text-xl">
+        👍
+      </div>
+      <h3 class="text-lg font-bold text-gray-800">Happy Tail Guarantee</h3>
+      <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+        Not happy? No wagging tail? We'll make it right with our 30-day easy return policy.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!--banner dog section-->
+
+<div class="bg-[#f3ede7]">
+
+<h2 class="text-4xl font-bold text-gray-800 m-5 ml-10 p-4">Shop by Catergory</h2>
+<p class="text-gray-600 mt-1 ml-10 p-4 text-base leading-relaxed">tailored Experienced for every member of the familiy.</p>
+
+<section class="max-w-7xl mx-auto px-6 py-16">
+
+  <!-- Grid -->
+  <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+
+    <!-- ================= LEFT BIG CARD ================= -->
+    <div class="lg:col-span-2 relative rounded-[40px] bg-[#f1ece6] overflow-hidden flex flex-col md:flex-row">
+
+      <!-- Content -->
+      <div class="p-8 md:w-1/2 z-10">
+        <h2 class="text-red-600 text-4xl font-bold">01</h2>
+
+        <h3 class="text-3xl font-extrabold text-gray-900 mt-4">
+          Everything for Dogs
+        </h3>
+
+        <p class="text-gray-600 mt-4">
+          From heavy-duty chew toys to grain-free gourmet feasts.
+        </p>
+
+        <!-- List -->
+        <ul class="mt-6 space-y-2 text-gray-700">
+          <li class="flex items-center gap-2">
+            <span class="text-teal-600">✔</span> Durable Gear
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-teal-600">✔</span> Puppy Nutrition
+          </li>
+        </ul>
+
+        <!-- Button -->
+        <button class="mt-8 bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">
+          Shop Canine
+        </button>
+      </div>
+
+      <!-- Image -->
+      <div class="md:w-1/2 relative">
+        <div class="absolute inset-0 bg-gradient-to-l from-[#e8dccf] to-transparent"></div>
+        <img src="./Images/img. 29.png"
+             class="w-full h-full object-cover">
+      </div>
+
+    </div>
+
+    <!-- ================= RIGHT SMALL CARD ================= -->
+    <div class="rounded-[40px] bg-teal-400 p-6 flex flex-col justify-between">
+
+      <!-- Text -->
+      <div>
+        <h3 class="text-2xl font-bold text-teal-900">Feline Essentials</h3>
+        <p class="text-teal-900 mt-2 text-sm">Pamper your cat with luxury.</p>
+      </div>
+
+      <!-- Image -->
+      <div class="mt-6 rounded-2xl overflow-hidden">
+        <img src="./Images/img. 32.png"
+             class="w-full h-56 object-cover">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!--banner in 1-->
+
+
+<section class="max-w-7xl mx-auto px-6 py-16">
+
+  <div class="bg-yellow-300 rounded-[40px] px-8 py-12 md:px-16 md:py-14 flex flex-col md:flex-row items-center justify-between gap-10">
+
+    <!-- LEFT CONTENT -->
+    <div class="max-w-lg">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-yellow-900">
+        Small Pet Kingdom
+      </h2>
+
+      <p class="text-yellow-900 mt-4 text-lg">
+        Specialized habitats and treats for rabbits, hamsters, and birds.
+      </p>
+
+      <button class="mt-6 bg-yellow-900 text-white px-6 py-3 rounded-full hover:bg-yellow-800 transition">
+        Discover Small Pets
+      </button>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="relative">
+      <img 
+        src="./Images/img. 13.png"
+        alt="Rabbit"
+        class="w-56 h-56 md:w-64 md:h-64 object-cover rounded-3xl shadow-xl transform rotate-6 hover:rotate-0 transition duration-500"
+      >
+    </div>
+
+  </div>
+
+</section>
+
+
+</div>
+
+
+<!--Meet out Consultent-->
+
+
+  <section class="max-w-7xl mx-auto px-6 py-16">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl md:text-5xl font-bold text-[#222]">
+        Meet Our Experts
+      </h2>
+
+      <p class="mt-5 text-gray-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+        Our certified veterinary doctors are here to provide the highest
+        standard of specialized care for your beloved companions.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-[#f3ede7] rounded-[28px] overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+
+        <div class="bg-white p-6 flex justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop"
+            alt="Dr Sarah Jenkins"
+            class="w-full h-[280px] object-cover rounded-[30px]"
+          />
+        </div>
+
+        <div class="px-6 pb-6">
+          <h3 class="text-2xl font-bold text-[#222]">
+            Dr. Sarah Jenkins
+          </h3>
+
+          <p class="text-red-600 font-semibold mt-1">
+            Senior Nutrition Specialist
+          </p>
+
+          <button
+            class="mt-6 w-full border-2 border-red-500 text-red-600 font-semibold py-3 rounded-full hover:bg-red-500 hover:text-white transition">
+            Book Consultation
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-[#f3ede7] rounded-[28px] overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+
+        <div class="bg-white p-6 flex justify-center">
+          <img
+            src="./Images/img. 35.png"
+            alt="Dr Michael Chen"
+            class="w-full h-[280px] object-cover rounded-[30px]"
+          />
+        </div>
+
+        <div class="px-6 pb-6">
+          <h3 class="text-2xl font-bold text-[#222]">
+            Dr. Michael Chen
+          </h3>
+
+          <p class="text-red-600 font-semibold mt-1">
+            Behavioral Expert
+          </p>
+
+          <button
+            class="mt-6 w-full border-2 border-red-500 text-red-600 font-semibold py-3 rounded-full hover:bg-red-500 hover:text-white transition">
+            Book Consultation
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-[#f3ede7] rounded-[28px] overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+
+        <div class="bg-white p-6 flex justify-center">
+          <img
+            src="./Images/img. 23.png"
+            alt="Dr Elena Rodriguez"
+            class="w-full h-[280px] object-cover rounded-[30px]"
+          />
+        </div>
+
+        <div class="px-6 pb-6">
+          <h3 class="text-2xl font-bold text-[#222]">
+            Dr. Elena Rodriguez
+          </h3>
+
+          <p class="text-red-600 font-semibold mt-1">
+            Senior Care Specialist
+          </p>
+
+          <button
+            class="mt-6 w-full border-2 border-red-500 text-red-600 font-semibold py-3 rounded-full hover:bg-red-500 hover:text-white transition">
+            Book Consultation
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-[#f3ede7] rounded-[28px] overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+
+        <div class="bg-white p-6 flex justify-center">
+          <img
+            src="./Images/img. 36.png"
+            alt="Dr James Wilson"
+            class="w-full h-[280px] object-cover rounded-[30px]"
+          />
+        </div>
+
+        <div class="px-6 pb-6">
+          <h3 class="text-2xl font-bold text-[#222]">
+            Dr. James Wilson
+          </h3>
+
+          <p class="text-red-600 font-semibold mt-1">
+            Emergency Care
+          </p>
+
+          <button
+            class="mt-6 w-full border-2 border-red-500 text-red-600 font-semibold py-3 rounded-full hover:bg-red-500 hover:text-white transition">
+            Book Consultation
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!--Meet the breeds-->
+
+  
+  <section class="max-w-7xl mx-auto px-5 py-14 bg-[#f3ede7]">
+
+    <!-- Heading -->
+    <div class="mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-[#222]">
+        Meet the Breeds
+      </h2>
+
+      <p class="text-gray-600 mt-3 text-lg">
+        Finding the perfect match for your lifestyle.
+      </p>
+    </div>
+
+    <!-- Breed Cards -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-[36px] p-6 hover:shadow-xl transition duration-300">
+
+        <img
+          src="./Images/img. 26.png"
+          alt="Golden Retriever"
+          class="w-full h-[280px] object-cover rounded-[32px]"
+        />
+
+        <div class="mt-6">
+          <h3 class="text-3xl font-bold text-[#222]">
+            Golden Retriever
+          </h3>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-3 mt-4">
+
+            <span class="bg-[#ddd5cf] text-[#5f514a] px-4 py-1 rounded-full text-sm font-semibold">
+              FRIENDLY
+            </span>
+
+            <span class="bg-[#ddd5cf] text-[#5f514a] px-4 py-1 rounded-full text-sm font-semibold">
+              ACTIVE
+            </span>
+
+          </div>
+
+          <p class="text-gray-700 mt-5 leading-relaxed text-[17px]">
+            The quintessential family dog, known for the gentle temperament and intelligence.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-[36px] p-6 hover:shadow-xl transition duration-300">
+
+        <img
+          src="./Images/img. 5.png"
+          alt="Persian Cat"
+          class="w-full h-[280px] object-cover rounded-[32px]"
+        />
+
+        <div class="mt-6">
+          <h3 class="text-3xl font-bold text-[#222]">
+            Persian Cat
+          </h3>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-3 mt-4">
+
+            <span class="bg-[#ddd5cf] text-[#5f514a] px-4 py-1 rounded-full text-sm font-semibold">
+              CALM
+            </span>
+
+            <span class="bg-[#ddd5cf] text-[#5f514a] px-4 py-1 rounded-full text-sm font-semibold">
+              LUXURY
+            </span>
+
+          </div>
+
+          <p class="text-gray-700 mt-5 leading-relaxed text-[17px]">
+            Famous for their long, beautiful coats and quiet, affectionate personalities.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-[36px] p-6 hover:shadow-xl transition duration-300">
+
+        <img
+          src="./Images/img. 9.png"
+          alt="French Bulldog"
+          class="w-full h-[280px] object-cover rounded-[32px]"
+        />
+
+        <div class="mt-6">
+          <h3 class="text-3xl font-bold text-[#222]">
+            French Bulldog
+          </h3>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-3 mt-4">
+
+            <span class="bg-[#ddd5cf] text-[#5f514a] px-4 py-1 rounded-full text-sm font-semibold">
+              PLAYFUL
+            </span>
+
+            <span class="bg-[#ddd5cf] text-[#5f514a] px-4 py-1 rounded-full text-sm font-semibold">
+              ADAPTABLE
+            </span>
+
+          </div>
+
+          <p class="text-gray-700 mt-5 leading-relaxed text-[17px]">
+            A small-scale companion with a large-scale personality, perfect for city living.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-[36px] p-6 hover:shadow-xl transition duration-300">
+
+        <img
+          src="./Images/img. 12.png"
+          alt="Maine Coon"
+          class="w-full h-[280px] object-cover rounded-[32px]"
+        />
+
+        <div class="mt-6">
+          <h3 class="text-3xl font-bold text-[#222]">
+            Maine Coon
+          </h3>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-3 mt-4">
+
+            <span class="bg-[#ddd5cf] text-[#5f514a] px-4 py-1 rounded-full text-sm font-semibold">
+              GIANT
+            </span>
+
+            <span class="bg-[#ddd5cf] text-[#5f514a] px-4 py-1 rounded-full text-sm font-semibold">
+              LOYAL
+            </span>
+
+          </div>
+
+          <p class="text-gray-700 mt-5 leading-relaxed text-[17px]">
+            The 'gentle giant' of the cat world, known for their size and bushy tails.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+<!--Cureted for excellence cards3-->
+
+  
+  <section class="max-w-7xl mx-auto px-5 py-16 bg-[#f3ede7]">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl md:text-5xl font-bold text-[#1f1f1f]">
+        Curated For Excellence
+      </h2>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Product Card 1 -->
+      <div class="bg-[#f3f3f3] rounded-[40px] p-8 relative hover:shadow-xl transition duration-300">
+
+        <!-- Badge -->
+        <span class="absolute top-12 left-12 bg-[#b62c35] text-white text-xs font-bold px-4 py-2 rounded-full tracking-wide">
+          ORGANIC
+        </span>
+
+        <!-- Product Image -->
+        <div class="bg-white rounded-[34px] p-10 flex items-center justify-center">
+          <img
+            src="./Images/img. 22.png"
+            alt="Organic Pet Food"
+            class="w-full h-[260px] object-cover rounded-xl"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="mt-8">
+          <h3 class="text-3xl font-bold text-[#222]">
+            Ancestral Grain Blend
+          </h3>
+
+          <p class="text-gray-600 text-lg mt-3">
+            Holistic nutrition for active breeds.
+          </p>
+
+          <!-- Footer -->
+          <div class="flex items-center justify-between mt-8">
+
+            <span class="text-5xl font-bold text-[#b62c35]">
+              $45.00
+            </span>
+
+            <button class="w-16 h-16 rounded-full bg-[#e2d8cf] flex items-center justify-center hover:bg-[#d5c7bb] transition">
+
+              <!-- Cart Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="w-8 h-8 text-[#222]"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor"
+                   stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 5h14M10 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"/>
+              </svg>
+
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="bg-white  rounded-[40px] p-8 relative hover:shadow-xl transition duration-300">
+
+        <!-- Badge -->
+        <span class="absolute top-12 left-12 bg-[#006d67] text-white text-xs font-bold px-4 py-2 rounded-full tracking-wide">
+          NEW
+        </span>
+
+        <!-- Product Image -->
+        <div class="bg-white  rounded-[34px] p-10 flex items-center justify-center">
+          <img
+            src="./Images/img. 43.png"
+            alt="Dog Rope Toy"
+            class="w-full h-[260px] object-cover rounded-xl"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="mt-8">
+          <h3 class="text-3xl font-bold text-[#222]">
+            Tough-Tug Rope Pro
+          </h3>
+
+          <p class="text-gray-600 text-lg mt-3">
+            Indestructible fun for power chewers.
+          </p>
+
+          <!-- Footer -->
+          <div class="flex items-center justify-between mt-8">
+
+            <span class="text-5xl font-bold text-[#b62c35]">
+              $18.50
+            </span>
+
+            <button class="w-16 h-16 rounded-full bg-[#e2d8cf] flex items-center justify-center hover:bg-[#d5c7bb] transition">
+
+              <!-- Cart Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="w-8 h-8 text-[#222]"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor"
+                   stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 5h14M10 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"/>
+              </svg>
+
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="bg-[#f3f3f3] rounded-[40px] p-8 relative hover:shadow-xl transition duration-300">
+
+        <!-- Badge -->
+        <span class="absolute top-12 left-12 bg-[#8b6b00] text-white text-xs font-bold px-4 py-2 rounded-full tracking-wide">
+          WELLNESS
+        </span>
+
+        <!-- Product Image -->
+        <div class="bg-[#e6dfd8] rounded-[34px] p-10 flex items-center justify-center">
+          <img
+            src="./Images/img. 54.png"
+            alt="Pet Vitamins"
+            class="w-full h-[260px] object-cover rounded-xl"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="mt-8">
+          <h3 class="text-3xl font-bold text-[#222]">
+            Vitality Drops 3-in-1
+          </h3>
+
+          <p class="text-gray-600 text-lg mt-3">
+            Omega-3 & Joint support for seniors.
+          </p>
+
+          <!-- Footer -->
+          <div class="flex items-center justify-between mt-8">
+
+            <span class="text-5xl font-bold text-[#b62c35]">
+              $29.99
+            </span>
+
+            <button class="w-16 h-16 rounded-full bg-[#e2d8cf] flex items-center justify-center hover:bg-[#d5c7bb] transition">
+
+              <!-- Cart Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="w-8 h-8 text-[#222]"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor"
+                   stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 5h14M10 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"/>
+              </svg>
+
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <!--FAQ Questions-->
+
+  
+    <div class="max-w-3xl mx-auto text-center m-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">
+            Curious Minds Want to Know
+        </h2>
+        <p class="text-zinc-600 mb-12">
+            Your common questions answered with a wag.
+        </p>
+
+        <div class="space-y-4">
+            
+            <div class="group border-none outline-none">
+                <details class="bg-[#FCF5F0] rounded-[40px] overflow-hidden transition-all duration-300">
+                    <summary class="flex items-center justify-between p-6 md:px-10 cursor-pointer list-none">
+                        <span class="text-lg md:text-xl font-semibold text-zinc-800 text-left">
+                            How do I choose the right food for my puppy?
+                        </span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="px-10 pb-8 text-left text-zinc-600 leading-relaxed">
+                        Selecting the best food depends on your puppy's breed size, energy level, and specific nutritional needs. We recommend consulting with your vet and looking for high-quality proteins.
+                    </div>
+                </details>
+            </div>
+
+            <div class="group border-none outline-none">
+                <details class="bg-[#FCF5F0] rounded-[40px] overflow-hidden transition-all duration-300">
+                    <summary class="flex items-center justify-between p-6 md:px-10 cursor-pointer list-none">
+                        <span class="text-lg md:text-xl font-semibold text-zinc-800 text-left">
+                            What is your return policy for toys?
+                        </span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="px-10 pb-8 text-left text-zinc-600">
+                        We offer a 30-day return policy for unused toys in their original packaging. If your pup didn't take to it, we're here to help!
+                    </div>
+                </details>
+            </div>
+
+            <div class="group border-none outline-none">
+                <details class="bg-[#FCF5F0] rounded-[40px] overflow-hidden transition-all duration-300">
+                    <summary class="flex items-center justify-between p-6 md:px-10 cursor-pointer list-none">
+                        <span class="text-lg md:text-xl font-semibold text-zinc-800 text-left">
+                            Are your supplements safe for seniors?
+                        </span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="px-10 pb-8 text-left text-zinc-600">
+                        Yes, our senior line is specifically formulated to support joint health and cognitive function in aging pets.
+                    </div>
+                </details>
+            </div>
+
+            <div class="group border-none outline-none">
+                <details class="bg-[#FCF5F0] rounded-[40px] overflow-hidden transition-all duration-300">
+                    <summary class="flex items-center justify-between p-6 md:px-10 cursor-pointer list-none">
+                        <span class="text-lg md:text-xl font-semibold text-zinc-800 text-left">
+                            Do you offer international shipping?
+                        </span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="px-10 pb-8 text-left text-zinc-600">
+                        Currently, we ship to the US, Canada, and the UK. We are working hard to bring our treats to more countries soon!
+                    </div>
+                </details>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--Book Call-->
+
+    <div class="bg-[#e6dfd8] container-fluid">
+    <div class="max-w-6xl mx-auto overflow-hidden rounded-[40px] relative bg-[#62f3d5] m-8  ">
+        
+        <div class="flex flex-col md:flex-row min-h-[450px]">
+            
+            <div class="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center z-10">
+                
+                <div class="inline-block">
+                    <span class="bg-[#004d4d]/20 text-[#004d4d] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full">
+                        Expert Advice
+                    </span>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-extrabold text-[#004d4d] mt-6 leading-tight">
+                    Unsure about something? Talk to a Vet.
+                </h2>
+
+                <p class="text-[#004d4d]/80 text-lg mt-6 max-w-md leading-relaxed">
+                    Get instant video consultations with certified veterinarians from the comfort of your home.
+                </p>
+
+                <div class="mt-10">
+                    <button class="bg-[#006666] hover:bg-[#004d4d] transition-all text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 shadow-xl shadow-teal-900/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M12 14v4"/><path d="M10 16h4"/></svg>
+                        Book a Call
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 relative h-[300px] md:h-auto">
+                <img 
+                    src="./Images/img. 38.png" 
+                    alt="Veterinarian with puppy" 
+                    class="absolute inset-0 w-full h-full object-cover"
+                >
+                <div class="absolute inset-0 bg-gradient-to-r from-[#62f3d5] via-[#62f3d5]/40 to-transparent hidden md:block"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#62f3d5] to-transparent md:hidden"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--Let's stay Touch-->
+
+  
+    <div class=" bg-[#F9F4EE] max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative ml-10">
+        
+        <div class="hidden md:block absolute top-0 right-[45%] w-32 h-32 bg-[#A8E6D9] rounded-full -z-10 translate-y-[-20%]"></div>
+
+        <div class="space-y-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-4">Let's Stay in Touch</h2>
+            
+            <div class="space-y-8">
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 shrink-0 bg-[#B23B3B] rounded-full flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#2D2D2D]">Main Sanctuary</h3>
+                        <p class="text-zinc-600 leading-relaxed">123 Pet Wellness Ave, Suite 400<br>San Francisco, CA 94103</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 shrink-0 bg-[#006D6D] rounded-full flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#2D2D2D]">Call Us</h3>
+                        <p class="text-zinc-600 leading-relaxed">General: (555) PAW-LY01<br>Vet Hotline: (555) VET-CARE</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 shrink-0 bg-[#7A7A1E] rounded-full flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#2D2D2D]">Email</h3>
+                        <p class="text-zinc-600 leading-relaxed">hello@pawly.care<br>support@pawly.care</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6">
+                <h3 class="text-xl font-bold text-[#2D2D2D] mb-4">Follow the Fun</h3>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-zinc-200 rounded-full flex items-center justify-center text-zinc-700 hover:bg-zinc-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-zinc-200 rounded-full flex items-center justify-center text-zinc-700 hover:bg-zinc-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-zinc-200 rounded-full flex items-center justify-center text-zinc-700 hover:bg-zinc-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group">
+            <div class="bg-[#9A8D8D] [40px] aspect-square flex items-center justify-center overflow-hidden shadow-2xl">
+                <img src="./Images/img. 52.png" 
+                     alt="World Map" 
+                     class="w-4/5 opacity-40 mix-blend-overlay">
+                
+                <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 flex flex-col items-end gap-2">
+                    <div class="bg-[#B23B3B] w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <div class="bg-white px-4 py-3 rounded-l-full shadow-md text-sm font-bold text-[#2D2D2D] border-y border-l border-zinc-100">
+                        Pawly Sanctuary
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<!--Footer section-->
+     <footer class="bg-[#F9F4EE] rounded-t-[60px] md:rounded-t-[100px] pt-16 pb-8 px-6 md:px-12 shadow-2xl m-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-extrabold text-[#A63232]">Pawly</h2>
+                    <p class="text-zinc-600 leading-relaxed max-w-xs">
+                        Curating the world's finest supplies for your non-human family members. We believe in quality, longevity, and extra belly rubs.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-[#A63232] hover:opacity-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </a>
+                        <a href="#" class="text-[#A63232] hover:opacity-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </a>
+                        <a href="#" class="text-[#A63232] hover:opacity-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.5 3.5 6.5 1 1.5 1.5 3 1.5 4.5a5 5 0 0 1-10 0Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-widest text-zinc-800">Pet Care</h3>
+                    <ul class="space-y-4 text-zinc-600">
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Puppy Care</a></li>
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Senior Wellness</a></li>
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Adopt Don't Shop</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-widest text-zinc-800">Sustainability</h3>
+                    <ul class="space-y-4 text-zinc-600">
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Eco-Packaging</a></li>
+                        <li><a href="#" class="hover:text-[#A63232] transition-colors">Ethical Sourcing</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-widest text-zinc-800">Newsletter</h3>
+                    <p class="text-zinc-600">Get treats and tips in your inbox.</p>
+                    <div class="relative max-w-sm">
+                        <input type="email" placeholder="Email address" 
+                            class="w-full bg-white rounded-full py-4 pl-6 pr-14 focus:outline-none focus:ring-2 focus:ring-[#A63232]/20 border border-zinc-100 placeholder:text-zinc-400">
+                        <button class="absolute right-2 top-2 bottom-2 bg-[#A63232] hover:bg-[#8e2b2b] text-white rounded-full px-4 flex items-center justify-center transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14-7-7 14-2-7-5-2Z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-200/50 text-center">
+                <p class="text-sm text-zinc-400">
+                    © 2026 Pawly Sanctuary. Made with love and treats.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+<!-- JS -->
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
+</body>
+</html>
